@@ -9,20 +9,25 @@
       <th>Order Total</th>
     </tr>
   </thead>
-  <tr>
+  <tr *ngFor="let cust of filteredCustomers">
     <td>
-      <a> </a>
+      <a>
+        {{ cust.name }}
+      </a>
     </td>
-    <td></td>
-    <td></td>
+    <td>{{ cust.city }}</td>
+    <td>{{ cust.orderTotal }}</td>
   </tr>
-  <tr>
+  <tr *ngIf="filteredCustomers && filteredCustomers.length == 0">
     <td colspan="2">&nbsp;</td>
-    <td></td>
+    <td>
+      {{ customersOrderTotal }}
+    </td>
   </tr>
-  <tr>
+  <tr *ngIf="!filteredCustomers || !filteredCustomers.length">
     <td colspan="4">No customers found</td>
   </tr>
 </table>
-Number of Customers:
+<br />
+Number of Customers: {{ filteredCustomers.length }}
 <br />
