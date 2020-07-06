@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { SharedModule } from '../shared/shared.module';
 import { CustomersComponent } from './customers.component';
 import { CustomersListComponent } from './customers-list/customers-list-component';
 import { FilterTextboxComponent } from './customers-list/filter-textbox.component';
@@ -11,7 +12,7 @@ import { FilterTextboxComponent } from './customers-list/filter-textbox.componen
     CustomersListComponent,
     FilterTextboxComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule],
   providers: [],
   bootstrap: [CustomersComponent],
   exports: [CustomersComponent], // use exports for using component after export as module
