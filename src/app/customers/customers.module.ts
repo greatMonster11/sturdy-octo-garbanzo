@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CustomersComponent } from './customers.component';
 import { CustomersListComponent } from './customers-list/customers-list-component';
 import { FilterTextboxComponent } from './customers-list/filter-textbox.component';
+import { CustomersRoutingModule } from './customers-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { FilterTextboxComponent } from './customers-list/filter-textbox.componen
     CustomersListComponent,
     FilterTextboxComponent,
   ],
-  imports: [CommonModule, SharedModule, FormsModule],
+  imports: [CommonModule, SharedModule, FormsModule, CustomersRoutingModule],
   providers: [],
   bootstrap: [CustomersComponent],
   exports: [CustomersComponent], // use exports for using component after export as module
